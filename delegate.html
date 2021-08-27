@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegate</title>
+</head>
+
+<body>
+  <h2>Event Delegate </h2>
+  // ul#item-container>li.item*6>lorem2
+  <ul id="item-container">
+    <li class="item">Lorem, ipsum.</li>
+    <li class="item">Ea, dolorem.</li>
+    <li class="item">Ullam, consectetur?</li>
+    <li class="item">Non, optio!</li>
+    <li class="item">Deserunt, dolores!</li>
+    <li class="item">Quae, quas?</li>
+  </ul>
+  <button id="add-item">Add Item</button>
+  <script>
+    //note : getElement by class name hoila kintu for er of loop use kora jaba 
+    const items = document.getElementsByClassName('item');
+    for (const item of items) {
+      item.addEventListener('click', function () {
+        document.getElementById('item-container').removeChild(item)
+      });
+
+    }
+    document.getElementById('add-item').addEventListener('click', function () {
+      const li = document.createElement('li');
+      li.innerText = 'Brand New Item';
+      const parent = document.getElementById('item-container');
+      parent.appendChild(li);
+    });// akane half kaj korci 24/8 video
+  </script>
+</body>
+
+</html>

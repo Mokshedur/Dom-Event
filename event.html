@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event</title>
+</head>
+
+<body>
+  <h1 onclick="console.log('h1 is cleced')">Event nia clickbuzi</h1>
+  <!-- <button onclick="console.log(7)">click Me</button> -->
+  <button onclick="document.body.style.backgroundColor = 'yellow'">click Me</button>
+  <button onclick="makeRed()">Click Me</button>
+  <button onclick="makeGreen()">Click Me</button>
+  <button id="make-blue">Click me </button>
+  <button id="light-blue">Click me </button>
+  <script src="js/event.js"></script>
+  <script>
+    const makeBlue = document.getElementById('make-blue');
+    makeBlue.onclick = blueButton;
+    function blueButton() {
+      document.body.style.backgroundColor = 'blue';
+    }
+
+
+  </script>
+</body>
+
+</html>
